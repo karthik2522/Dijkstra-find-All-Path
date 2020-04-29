@@ -37,7 +37,7 @@ class Dijkstra
 		 
 		 s[src]=1;
 		 d[src]=0;
-		 //find shortest distance & the path to other vertices
+
 		 for(i=1;i<n;i++)
 		 {
 			 for(j=1,min=999;j<=n;j++)
@@ -47,7 +47,7 @@ class Dijkstra
 					 min=d[j];
 					 u=j;
 				 }
-			 }//end of j for loop
+			 }
 		  
 			 s[u]=1;
 			 
@@ -58,9 +58,9 @@ class Dijkstra
 						d[v]=d[u]+a[u][v];
 						p[v]=u;
 					}
-			}//end of v for loop 
-		 }//end of i for loop
-System.out.println("The shortest path From Source to Destination:");
+			} 
+		 }
+		System.out.println("The shortest path From Source to Destination:");
 		 
 		 for(j=1;j<=n;j++)
 		 {
@@ -78,7 +78,7 @@ System.out.println("The shortest path From Source to Destination:");
 		 		 }
 		 		 System.out.println(i+"="+d[j]);
 		 	 }
-		 }//end of j for loop
+		 }
  }
 }
 
