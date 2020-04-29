@@ -3,13 +3,13 @@ class Dijkstra
 {
 	 int n,src;
 	 int a[][]=new int[10][10];
-	 void read_cost_adjacency_matrix()
+	 void read_matrix()
 	{
 		    System.out.println("********* DIJKSTRA'S ALGORITHM *********");
 		    System.out.println("Enter no. of nodes :");
-		    Scanner sobj=new Scanner (System.in);
-		    n=sobj.nextInt();
-		    System.out.println("Enter cost adjacency matrix :");
+		    Scanner obj=new Scanner (System.in);
+		    n=obj.nextInt();
+		    System.out.println("Enter cost Matrix :");
 		    for(int i=1;i<=n;i++)
 		   {
 			for(int j=1;j<=n;j++)
@@ -18,11 +18,11 @@ class Dijkstra
 			}
 		   }
 			System.out.println("Enter source vertex :");
-			src=sobj.nextInt();
-			sobj.close();
+			src=obj.nextInt();
+			obj.close();
 	}
 	 
-	 void find_short_distance_path()
+	 void find_path()
 	 {
 		 int i,j,v,min,u=0;
 		 int d[]=new int[10];
@@ -60,8 +60,7 @@ class Dijkstra
 					}
 			}//end of v for loop 
 		 }//end of i for loop
-System.out.println("The shortest path and distance is shown below:");
-System.out.println("DEST VERTEX<-(Intermediate vertices)<-SOURCE=DISTANCE");
+System.out.println("The shortest path From Source to Destination:");
 		 
 		 for(j=1;j<=n;j++)
 		 {
@@ -83,12 +82,12 @@ System.out.println("DEST VERTEX<-(Intermediate vertices)<-SOURCE=DISTANCE");
  }
 }
 
-public class example
+public class Dijkstra1
 {
 	public static void main(String[] args) 
 	{
 		Dijkstra ob=new Dijkstra();
-		ob.read_cost_adjacency_matrix();
-		ob.find_short_distance_path();
+		ob.read_matrix();
+		ob.find_path();
 	}
 }
